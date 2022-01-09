@@ -24,6 +24,9 @@ do
 
   # Merge the .jpgs in only one pdf
   img2pdf -o "${OUTDIRR}${name}".pdf ./"${OUTDIRR}${name}"/*.jpg
+
+  # Delete extracted files
+  rm -r "./${OUTDIRR}${name}"
 done
 
 echo -e "\nTotal time: ${SECONDS}s"
